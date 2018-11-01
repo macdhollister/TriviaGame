@@ -1,0 +1,66 @@
+body {
+    font-size: 40px;
+    word-wrap: break-word;
+}
+
+.bg {
+    /* The image used */
+    background-image: url("../images/Dunder-Mifflin-building.jpg");
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#gameContainer {
+    /* background-color: white; */
+    background-color: rgba(255,255,255,0.5);
+    opacity: 0.8;
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    height: 80%;
+    width: 80%;
+}
+
+.logos {
+    height: 15%;
+    width: auto;
+}
+
+#dm_logo {
+    float: right;
+}
+
+#questionText {
+    margin-top: 5px;
+}
+
+#timerText {
+    text-align: center;
+    border-style: solid;
+    margin-top: 5px;
+}
+
+.answer {
+    width: 100%;
+    margin: 10px 0;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+}
+
+.answer:hover {
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    background-color: grey;
+}
+
+#answersRow {
+    margin-top: 40px;
+}
