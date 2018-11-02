@@ -1,5 +1,11 @@
 $(document).ready(function() {
 
+    let startScreen = $("#startScreen");
+    let questionScreen = $("#questionScreen");
+    let gameOverScreen = $("#gameOverScreen");
+
+    questionScreen.hide();
+
     game = {
         numCorrect: 0,
         numIncorrect: 0,
@@ -9,6 +15,13 @@ $(document).ready(function() {
         currentTimeLeft: 20,
         // other stuff?
     }
+
+    $("#start").click(function() {
+        startScreen.hide();
+        questionScreen.show();
+
+        // start the timer
+    })
 
     $(".answer").click(function(event) {
         game.userAnswer = event.target.id;
@@ -40,6 +53,9 @@ $(document).ready(function() {
         $("#d").text(q.d);
         game.currentTimeLeft = 20;
         game.correctAnswer = q.correct;
+
+        // start question timer from
+        // currentTimeLeft
     }
 
     newQuestion(1);
