@@ -4,6 +4,7 @@ $(document).ready(function() {
     let questionScreen = $("#questionScreen");
     let questionAnsweredScreen = $("#questionAnsweredScreen");
     let gameOverScreen = $("#gameOverScreen");
+    let answerImage = $("#answerImage");
 
     let timeLeft = $("#timeLeft");
 
@@ -70,18 +71,26 @@ $(document).ready(function() {
 
     function giveAnswer(userAnswer) {
         clearInterval(game.timer);
-
         $("#correctAnswer").text(game.question[game.question.correct]);
 
+        let randSelect = Math.floor(Math.random()*6 + 1);
+
+        // unanswered
         if (userAnswer === "none") {
+            answerImage.attr("src", "assets/images/unanswered.gif");
             $("#rightWrong").text("You didn't answer!");
             game.numSkipped++;
+
+        // correct answer
         } else if (userAnswer === game.question.correct) {
             $("#rightWrong").text("Correct!");
             game.numCorrect++;
+            answerImage.attr("src", `assets/images/correct/${randSelect}.gif`);
+        // incorrect answer
         } else {
             $("#rightWrong").text("Wrong!");
             game.numIncorrect++;
+            answerImage.attr("src", `assets/images/incorrect/${randSelect}.gif`);
         }
 
 
