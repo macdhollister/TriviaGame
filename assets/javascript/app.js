@@ -28,11 +28,18 @@ $(document).ready(function() {
         giveAnswer(event.target.id);
     });
 
+    $("#restart").click(function() {
+        resetGame();
+    })
+
     function resetGame() {
         game.numCorrect = 0;
         game.numIncorrect = 0;
         game.numSkipped = 0;
         game.currentQuestion = 0;
+
+        gameOverScreen.hide();
+        startScreen.show();
         // update other stuff in game if needed
     }
 
@@ -88,6 +95,10 @@ $(document).ready(function() {
             } else {
                 questionAnsweredScreen.hide();
                 gameOverScreen.show();
+
+                $("#numCorrect").text(game.numCorrect);
+                $("#numIncorrect").text(game.numIncorrect);
+                $("#unanswered").text(game.numSkipped);
                 console.log(
                     `Correct Answers: ${game.numCorrect}`,
                     `Incorrect Answers: ${game.numIncorrect}`,
@@ -97,10 +108,10 @@ $(document).ready(function() {
         }, 5000);
     }
 
-    startScreen.hide()
+    // startScreen.hide()
     questionScreen.hide();
     questionAnsweredScreen.hide();
-    // gameOverScreen.hide();
+    gameOverScreen.hide();
 })
 
 
