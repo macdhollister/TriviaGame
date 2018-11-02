@@ -89,3 +89,17 @@ body {
     background-color: gray;
     padding: 0 20px;
 }
+
+#resultContainer {
+    text-align: center;
+    height: 100%;
+}
+
+#result {
+    margin-top: 10%;
+}
+
+#answerImage {
+    height: 50%;
+    width: auto;
+}

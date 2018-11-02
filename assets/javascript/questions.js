@@ -16,4 +16,13 @@ let questionsData = [
         "d"        : "Erin Hannon",
         "correct"  : "b"
     },
+
+    {
+        "question" : "What kind of bear is best?",
+        "a"        : "Polar Bear",
+        "b"        : "Grizzly Bear",
+        "c"        : "Kodiak Bear",
+        "d"        : "Black Bear",
+        "correct"  : "d"
+    },
 ]
