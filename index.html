@@ -84,7 +84,21 @@
         </div>
 
         <div class="container" id="gameOverScreen">
-            game over
+            <div class="row">
+                <div class="col startContent" id="endHeader">GAME OVER</div>
+            </div>
+
+            <div class="row">
+                <div class="col startContent">
+                    <p>Correct answers: <span id="numCorrect"></span></p>
+                    <p>Incorrect answers: <span id="numIncorrect"></span></p>
+                    <p>Unanswered: <span id="unanswered"></span></p>
+                </div>
+            </div>
+
+            <div id="restartButton">
+                <button id="restart">RESTART</button>
+            </div>
         </div>
     </div>
 </body>

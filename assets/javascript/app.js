@@ -13,8 +13,6 @@ $(document).ready(function() {
         numIncorrect: 0,
         numSkipped: 0,
         question: null,
-        correctAnswer: "",
-        userAnswer: "",
         currentTimeLeft: 5, // change to 20
         timer: null,
         // other stuff?
@@ -27,7 +25,6 @@ $(document).ready(function() {
     })
 
     $(".answer").click(function(event) {
-        game.userAnswer = event.target.id;
         giveAnswer(event.target.id);
     });
 
@@ -62,7 +59,6 @@ $(document).ready(function() {
         $("#c").text(q.c);
         $("#d").text(q.d);
         game.currentTimeLeft = 5;
-        game.correctAnswer = q.correct;
     }
 
     function giveAnswer(userAnswer) {
@@ -101,10 +97,10 @@ $(document).ready(function() {
         }, 5000);
     }
 
-    // startScreen.hide()
+    startScreen.hide()
     questionScreen.hide();
     questionAnsweredScreen.hide();
-    gameOverScreen.hide();
+    // gameOverScreen.hide();
 })
 
 

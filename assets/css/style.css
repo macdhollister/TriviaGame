@@ -69,7 +69,7 @@ body {
     text-align: center;
 }
 
-#startHeader {
+#startHeader, #endHeader {
     font-weight: bold;
     font-size: 70px;
     background-color: white;
@@ -85,7 +85,17 @@ body {
     font-size: 100px;
 }
 
-#start {
+#restartButton {
+    position: absolute;
+    bottom: 20%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 100px;
+}
+
+#start, #restart {
     background-color: gray;
     padding: 0 20px;
 }
