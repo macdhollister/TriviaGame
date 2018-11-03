@@ -44,6 +44,8 @@ $(document).ready(function() {
     }
 
     function newQuestion(q) {
+        questionAnsweredScreen.hide();
+
         timeLeft.text("20");
         game.timer = setInterval(function() {
             game.currentTimeLeft--;
