@@ -41,7 +41,6 @@ $(document).ready(function() {
 
         gameOverScreen.hide();
         startScreen.show();
-        // update other stuff in game if needed
     }
 
     function newQuestion(q) {
@@ -122,22 +121,3 @@ $(document).ready(function() {
     questionAnsweredScreen.hide();
     gameOverScreen.hide();
 })
-
-
-
-/*
-game object:
-    correct answers
-    incorrect answers
-    skipped answers
-    current currect answer
-    current time left
-
-Also possibly keep track of answers in the game object instead, then use a
-update screen function to change what the displayed text is
-
-Keep track of correct answer (in game object -- "a", "b", "c", or "d")
-newQuestion updates correct answer
-
-
-*/
