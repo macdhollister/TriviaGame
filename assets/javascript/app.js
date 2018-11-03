@@ -14,7 +14,7 @@ $(document).ready(function() {
         numIncorrect: 0,
         numSkipped: 0,
         question: null,
-        currentTimeLeft: 5, // change to 20
+        currentTimeLeft: 20,
         timer: null,
         // other stuff?
     }
@@ -44,6 +44,7 @@ $(document).ready(function() {
     }
 
     function newQuestion(q) {
+        timeLeft.text("20");
         game.timer = setInterval(function() {
             game.currentTimeLeft--;
             timeLeft.text(game.currentTimeLeft);
@@ -65,7 +66,7 @@ $(document).ready(function() {
         $("#b").text(q.b);
         $("#c").text(q.c);
         $("#d").text(q.d);
-        game.currentTimeLeft = 5;
+        game.currentTimeLeft = 20;
     }
 
     function giveAnswer(userAnswer) {
